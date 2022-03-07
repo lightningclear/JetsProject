@@ -49,7 +49,7 @@ public class JetsApplication {
 			af.dogFight(jets);
 			break;
 		case 7:
-			af.newJet(af);
+			af.newJet(kb);
 			break;
 		case 8:
 			af.removeJet(kb);

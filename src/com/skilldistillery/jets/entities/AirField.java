@@ -103,27 +103,23 @@ public class AirField {
 			gy++;
 		}
 		int user = kb.nextInt();
-		jets.remove(user);
+		jets.remove(user-1);
 	}
 
-	public void newJet(AirField af) {
-		Scanner kb = Scanner(System.in); 
-		for(int i=0;i<jets.size();i++) {
+	public void newJet(Scanner kb) {
+		
 		System.out.println("please enter your model: ");
-		kb.next();
+		
+		String model = kb.nextLine();
 		System.out.println("Enter the speed: ");
-		kb.nextInt();
+		int speed = kb.nextInt();
 		System.out.println("Enter the range: ");
-		kb.nextInt();
+		int range = kb.nextInt();
 		System.out.println("Enter the price: ");
-		kb.nextLong();
-			
+		long price = kb.nextLong();
+		Fighter fighter = new Fighter(model, speed, range, price);
+		jets.add(fighter);
 		}
 	}
 
-	private Scanner Scanner(InputStream in) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
-}
